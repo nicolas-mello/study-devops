@@ -124,6 +124,30 @@ pipeline {
 
 ---
 
+## 🌱 GitOps
+
+**GitOps** é uma prática que utiliza **Git como fonte de verdade** para infraestrutura e deploys automáticos, integrando CI/CD e Kubernetes/Helm.
+
+### Benefícios
+- Automatiza deploys a partir de merges/commits
+- Mantém o cluster sincronizado com o repositório
+- Facilita rollback e auditoria
+- Permite padronizar deploys em múltiplos ambientes
+
+### Ferramentas populares
+- ArgoCD
+- Flux
+- version-notify (para notificação de versões e updates)
+
+### Exemplo de fluxo GitOps
+1. Desenvolvedor cria feature branch e faz merge no main
+2. Pipeline CI/CD builda artefato e atualiza imagem Docker
+3. GitOps detecta mudança no repositório (manifest ou Helm chart)
+4. Cluster Kubernetes é automaticamente atualizado
+5. Notificações sobre deploy e versão são enviadas (ex: version-notify)
+
+---
+
 ## 💡 Boas práticas de CI/CD
 
 - Versionar sempre o Jenkinsfile ou pipeline de CI/CD junto ao código
