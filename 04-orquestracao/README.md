@@ -55,8 +55,29 @@ kubectl get svc
 
 ## ⚙️ Helm Charts
 
-Helm permite versionar e parametrizar deploys com templates.
+- Helm permite versionar e parametrizar deploys com templates.
+- Use o chart java-app como estudo: alterar values.yaml muda replicas, imagem e porta.
 
-Use o chart java-app como estudo: alterar values.yaml muda replicas, imagem e porta.
+### Exemplo de deploy com Helm:
 
-Exemplo de deploy com Helm:
+```bash
+helm install java-app ./helm-charts/java-app
+helm upgrade java-app ./helm-charts/java-app
+helm uninstall java-app
+```
+
+---
+
+## 📂 Scripts de estudo
+
+- **start-minikube.sh** → inicia cluster local
+- **deploy-app.sh** → aplica manifests ou charts
+- **delete-app.sh** → limpa recursos do cluster
+
+---
+
+## 💡 Dicas de estudo
+
+- Sempre teste em cluster local antes de ambientes de produção
+- Explore kubectl explain <recurso> para entender campos do YAML
+- Combine Helm + GitOps para deploys mais organizados
