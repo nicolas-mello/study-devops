@@ -1,0 +1,50 @@
+version: "3.9"  # Versão da sintaxe do docker-compose
+
+services:
+  java-app:
+    # Build a partir do Dockerfile do exemplo Java com Maven
+    build: ./java-app
+
+    # Mapeamento de portas: host:container
+    ports:
+      - "8080:8080"
+
+    # Rede interna para comunicação com outros serviços
+    networks:
+      - study-network
+
+    # Dependência: espera o banco subir antes de iniciar
+    depends_on:
+      - db
+
+    # Reinicia automaticamente se o container cair
+    restart: always
+
+  db:
+    # Imagem oficial do PostgreSQL
+    image: postgres:15
+
+    # Variáveis de ambiente para criar usuário, senha e banco
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mydb
+
+    # Persistência de dados usando volumes nomeados
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+    # Conexão na mesma rede do app
+    networks:
+      - study-network
+
+    # Reinicia automaticamente se o container cair
+    restart: always
+
+# Volumes nomeados: dados persistentes fora do container
+volumes:
+  db-data:
+
+# Rede interna do estudo
+networks:
+  study-network:
