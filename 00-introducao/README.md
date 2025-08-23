@@ -62,7 +62,7 @@ flowchart LR
 
 ## 💡 Dicas de estudo
 
-Sempre tente praticar os conceitos em laboratório (Docker, Minikube, VMs locais)
-Use o Git para versionar tudo que você fizer
-Explore diagramas e fluxos para entender o ciclo DevOps
-Leia sobre cultura DevOps e cases de sucesso
+- Sempre tente praticar os conceitos em laboratório (Docker, Minikube, VMs locais)
+- Use o Git para versionar tudo que você fizer
+- Explore diagramas e fluxos para entender o ciclo DevOps
+- Leia sobre cultura DevOps e cases de sucesso
