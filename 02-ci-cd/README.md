@@ -112,8 +112,8 @@ pipeline {
 
 ```
 
-`@Library('meu-shared-library') _` → importa a biblioteca compartilhada
-`buildProject('meu-app')` → função definida na biblioteca
+- `@Library('meu-shared-library') _` → importa a biblioteca compartilhada
+- `buildProject('meu-app')` → função definida na biblioteca
 
 ### Observações
 
