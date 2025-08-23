@@ -1,0 +1,6 @@
+apiVersion: v2
+name: java-app
+description: Chart de estudo para aplicação Java
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
