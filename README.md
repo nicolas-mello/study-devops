@@ -35,7 +35,7 @@ Este repositório foi criado para servir como material de estudo, referência e 
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/nicolas-mello/study.git
+   git clone https://github.com/nicolas-mello/study-devops.git
    cd study
    ```
 
