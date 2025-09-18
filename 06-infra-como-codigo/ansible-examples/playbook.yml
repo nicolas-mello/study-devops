@@ -1,0 +1,20 @@
+# Playbook simples para instalar Nginx em servidores
+- name: Instalar Nginx
+  hosts: servidores          # Definido no arquivo de inventário (hosts)
+  become: yes               # Permite executar tarefas como root
+  tasks:
+    - name: Atualizar pacotes
+      apt:
+        update_cache: yes
+
+    - name: Instalar Nginx
+      apt:
+        name: nginx
+        state: present
+
+# Comentários de estudo:
+# - "hosts" define em quais máquinas o playbook será executado
+# - "tasks" são ações a serem realizadas
+# - Idempotência: se Nginx já estiver instalado, Ansible não fará alterações
+# - "become: yes" é necessário para comandos que exigem privilégios de root
+# - Ansible é imperativo, mas cada tarefa é aplicada de forma segura
