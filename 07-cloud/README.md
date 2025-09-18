@@ -8,6 +8,9 @@ Esta pasta apresenta conceitos fundamentais de **Cloud Computing**, principais p
 07-cloud/
 ├── README.md                  # Conceitos de cloud computing e provedores
 └── notes/                     # Anotações ou cheatsheets de provedores
+     ├── aws-cheatsheet.md
+     ├── gcp-cheatsheet.md
+     └── oci-cheatsheet.md
 ```
 
 ---
