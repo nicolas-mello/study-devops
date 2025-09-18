@@ -4,6 +4,8 @@ Esta pasta apresenta conceitos de **DevSecOps**, práticas de segurança integra
 
 ---
 
+## 📂 Estrutura da pasta
+
 ```text
 08-seguranca/
 ├── README.md                  # Conceitos de DevSecOps, scanners, boas práticas

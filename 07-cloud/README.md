@@ -4,6 +4,8 @@ Esta pasta apresenta conceitos fundamentais de **Cloud Computing**, principais p
 
 ---
 
+## 📂 Estrutura da pasta
+
 ```text
 07-cloud/
 ├── README.md                  # Conceitos de cloud computing e provedores
